@@ -27,7 +27,17 @@
 
   <children >
 
-    <LabelList id = "exampleLabelList" >
+    <LabelList id = "exampleLabelList" 
+      color = "0x000000cc"
+      focusedColor = "#000000"
+      >
+<!--
+      focusedColor = "0xefefef"
+      focusedFont = "SmallBoldSystemFont"
+      vertFocusAnimationStype = "fixedFocusWrap"
+      focusBitmapUri = "pkg:/images/live_pill_overlay.9.png"
+      focusFootprintBitmapUri = "pkg:/images/Filter_Button_NoFocus.9.png"
+-->
 
       <ContentNode role = "content" >
         <ContentNode title = "Renderable Nodes" />
@@ -41,3 +51,4 @@
   </children>
 
 </component>
+
