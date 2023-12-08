@@ -27,13 +27,17 @@
 
   <children >
 
-    <LabelList id = "exampleLabelList" 
+    <LabelList id = "exampleLabelList"
       color = "0x000000cc"
       focusedColor = "#000000"
+      focusFootprintBlendColor = "#800000"
+
       >
+
 <!--
+      focusedFont = "theme:SmallBoldSystemFont"
+      focusBitmapBlendColor = "#008000" - Green - Color of background of focused item.
       focusedColor = "0xefefef"
-      focusedFont = "SmallBoldSystemFont"
       vertFocusAnimationStype = "fixedFocusWrap"
       focusBitmapUri = "pkg:/images/live_pill_overlay.9.png"
       focusFootprintBitmapUri = "pkg:/images/Filter_Button_NoFocus.9.png"
