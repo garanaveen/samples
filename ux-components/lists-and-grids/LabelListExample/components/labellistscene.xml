@@ -27,7 +27,7 @@
 
   <children >
 
-    <LabelList id = "exampleLabelList" 
+    <LabelList id = "exampleLabelList"
       color = "0x000000cc"
       focusedColor = "#000000"
       >
