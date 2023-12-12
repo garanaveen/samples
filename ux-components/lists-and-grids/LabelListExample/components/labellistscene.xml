@@ -11,7 +11,7 @@
     sub init()
       m.top.backgroundURI = "pkg:/images/rsgde_bg_hd.jpg"
 
-      example = m.top.findNode("exampleLabelList")
+      example = m.top.findNode("pip_menu_group")
 
       examplerect = example.boundingRect()
       centerx = (1280 - examplerect.width) / 2
@@ -27,18 +27,54 @@
 
   <children >
 
-    <LabelList id = "exampleLabelList"
-      color = "0x000000cc"
-      focusedColor = "#000000"
-      >
-<!--
-      focusedColor = "0xefefef"
+    <Group id="pip_menu_group" visible = "true">
+        <!--
+            <Rectangle id="menu_back"
+            color="#000000"
+            width="{fhd:470}" height="{fhd:320}">
+        </Rectangle>
+
+                   focusBitmapUri = "Filter_Button_NoFocus.9.png"
+                   focusBitmapUri = "pkg:/images/live_pill_overlay.9.png"
+        -->
+        <Poster id="background_poster"
+            uri="pkg:/images/Filter_Button_NoFocus.9.png"
+            color="#000000"
+            transperancy="0.5"
+            width="{fhd:470}" height="{fhd:320}">
+        </Poster>
+
+        <LabelList id="exampleLabelList"
+                   translation = "{fhd:[36,0]}"
+                   vertFocusAnimationStyle = "floatingFocus"
+                   focusedColor="#000000"
+                   focusBitmapBlendColor = "#efefef"
+                   itemSpacing = "{fhd:[0,27]}"
+                   itemSize = "{fhd:[400,58]}" >
+            <ContentNode id = "menu_content" role = "content" >
+                <ContentNode title = "Renderable Nodes" />
+                <ContentNode title = "Z-Order/Parent-Child" />
+                <ContentNode title = "Animations" />
+                <ContentNode title = "Events and Observers" />
+            </ContentNode>
+
+        </LabelList>
+
+    </Group>
+
+
+      <!-- focusedColor = "0xefefef"
       focusedFont = "SmallBoldSystemFont"
       vertFocusAnimationStype = "fixedFocusWrap"
       focusBitmapUri = "pkg:/images/live_pill_overlay.9.png"
       focusFootprintBitmapUri = "pkg:/images/Filter_Button_NoFocus.9.png"
--->
+ -->
 
+<!--
+    <LabelList id="exampleLabelList"
+      color = "0x000000cc"
+      focusedColor = "#000000"
+      >
       <ContentNode role = "content" >
         <ContentNode title = "Renderable Nodes" />
         <ContentNode title = "Z-Order/Parent-Child" />
@@ -47,6 +83,8 @@
       </ContentNode>
 
     </LabelList>
+ -->
+
 
   </children>
 
