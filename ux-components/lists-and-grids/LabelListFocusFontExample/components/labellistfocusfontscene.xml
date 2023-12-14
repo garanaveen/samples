@@ -33,7 +33,7 @@
 
     <LabelList 
       id = "exampleLabelList" 
-      vertFocusAnimationStyle = "floatingFocus" 
+      vertFocusAnimationStyle = "fixedFocusWrap" 
       drawFocusFeedback = "false" 
       color = "0xAAAA10FF" 
       focusedColor = "0xEBEB10FF" 

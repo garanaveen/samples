@@ -19,6 +19,13 @@
       example.translation = [ centerx, centery ]
 
       m.top.setFocus(true)
+
+      menuContent = m.top.findNode("menu_content")
+      newItem = menuContent.CreateChild("ContentNode")
+      newItem.title = "Item text 2713" + chr(2713)
+      newItem.title = "Item text 2714" + chr(2714)
+      newItem.description = "Description"
+
     end sub
 
     ]]>
@@ -44,6 +51,8 @@
             width="{fhd:470}" height="{fhd:320}">
         </Poster>
 
+                   <!-- vertFocusAnimationStyle = "fixedFocusWrap" -->
+                   <!-- focusRow="3" -->
         <LabelList id="exampleLabelList"
                    translation = "{fhd:[36,0]}"
                    vertFocusAnimationStyle = "floatingFocus"
@@ -52,10 +61,22 @@
                    itemSpacing = "{fhd:[0,27]}"
                    itemSize = "{fhd:[400,58]}" >
             <ContentNode id = "menu_content" role = "content" >
+                <!-- <ContentNode title = "FixedFocusWrap" /> -->
+                <ContentNode title = "FloatingFocus" />
                 <ContentNode title = "Renderable Nodes" />
                 <ContentNode title = "Z-Order/Parent-Child" />
                 <ContentNode title = "Animations" />
                 <ContentNode title = "Events and Observers" />
+                <ContentNode title = "Option 1" />
+                <ContentNode title = "Option 2" />
+                <ContentNode title = "Option 3" />
+<!--
+                <ContentNode title = "Option 4" />
+                <ContentNode title = "Option 5" />
+                <ContentNode title = "Option 6" />
+                <ContentNode title = "Option 6" />
+                <ContentNode title = "Option 7" />
+ -->
             </ContentNode>
 
         </LabelList>
