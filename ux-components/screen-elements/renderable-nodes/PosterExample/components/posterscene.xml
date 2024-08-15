@@ -11,15 +11,29 @@
     sub init()
       m.top.backgroundURI = "pkg:/images/rsgde_bg_hd.jpg"
 
-      example = m.top.findNode("examplePoster")
+      example = m.top.findNode("examplePoster1")
 
       examplerect = example.boundingRect()
       centerx = (1280 - examplerect.width) / 2
       centery = (720 - examplerect.height) / 2
       example.translation = [ centerx, centery ]
 
+      CreateMuteIndicator(example)
+
+
+      example2 = m.top.findNode("examplePoster2")
+      CreateMuteIndicator(example2)
+
       m.top.setFocus(true)
     end sub
+
+
+    Sub CreateMuteIndicator(widget As Object)
+        muteIndicator = createObject("roSGNode", "Poster")
+        muteIndicator.uri = "pkg:/images/mute.png"
+        widget.appendChild(muteIndicator)
+    End Sub
+
 
     ]]>
 
@@ -27,11 +41,39 @@
 
   <children >
 
-    <Poster
-      id = "examplePoster" 
-      width = "512" 
-      height = "288" 
-      uri = "http://sdktestinglab.com/Tutorial/images/videopg.jpg" />
+    <LayoutGroup id="topLeftLayout" layoutDirection="horiz"
+        visible="true"
+        translation="{fhd:[30,60],hd:[40,20]}"
+        itemSpacings="{fhd:[30,30],hd:[20,20]}">
+
+        <Poster
+        id = "examplePoster1"
+        width = "50"
+        height = "30"
+        blendColor = "0x0B001B"
+        uri = "pkg:/images/badge-bg-placeholder.9.png" >
+
+                <!-- <Poster
+                    id = "mutePoster1"
+                    uri = "pkg:/images/mute.png" >
+                </Poster> -->
+
+        </Poster>
+
+        <Poster
+        id = "examplePoster2"
+        width = "50"
+        height = "30"
+        uri = "pkg:/images/badge-bg-placeholder.9.png" >
+
+                <!-- <Poster
+                    id = "mutePoster2"
+                    uri = "pkg:/images/mute.png" >
+                </Poster> -->
+
+        </Poster>
+
+    </LayoutGroup>
 
   </children>
 
